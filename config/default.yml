@@ -1,0 +1,89 @@
+###########################################################
+# APPLICATION SETTINGS                                    #
+###########################################################
+ app_base_auth_login: login
+ app_base_auth_pass: pass
+ app_protocol: http
+ app_host: upwork.com
+
+ app_test_user: test@test.com
+ app_test_pass: mypass
+ app_test_user_name: Auto Tester
+
+ app_api_token:
+ app_api_end_point: "api/v1"
+ app_api_protocol: http
+
+###########################################################
+# TEST ENVIRONMENTS SETTINGS                              #
+###########################################################
+ page_load_idle_timeout: 20
+ maximized_window: true # Specify maximized browser window size
+
+ # Specify one of the following drivers: selenium, selenium_grid, webkit, poltergeist, phantomjs, sauce,
+ # testingbot, browserstack
+ driver: selenium
+
+ # -Selenium-
+ # specify one of next browsers: iexplore (ie), firefox (ff), chrome, safari
+ selenium_browser: chrome
+
+ # -Selenium Grid-
+ selenium_hub_url: "http://example.com:4444/wd/hub"
+
+ # -PhantomJS/Poltergeist-
+ # specify settings for poltergeist
+ phantom_ignore_js_errors: false
+ phantom_ignore_ssl_errors: true
+
+###########################################################
+# Cloud-based Cross-browser Services                      #
+###########################################################
+ cloud_auth_login: some_user_or_client_key
+ cloud_auth_pass: api_key_or_api_secret_or_access_key
+ cloud_platform: any
+ cloud_browser_name: Chrome
+ cloud_browser_version: '31'
+ cloud_max_duration: '1800'
+ cloud_http_idle_timeout: 40
+
+ # -SauceLabs- (https://wiki.saucelabs.com/display/DOCS/Test+Configuration+Options)
+ cloud_sauce_record_screenshots: false
+ cloud_sauce_idle_timeout: '180'
+ cloud_sauce_video_upload_on_pass: false
+
+ # -TestingBot- (https://testingbot.com/support/other/test-options)
+ cloud_testingbot_idle_timeout: '180'
+ cloud_testingbot_screenshots: false
+
+ # -BrowserStack (https://www.browserstack.com/automate/capabilities)
+ cloud_bstack_resolution: '1024x768'
+ cloud_bstack_project: 'Howitzer Example'
+ cloud_bstack_build: 'v1'
+ cloud_bstack_mobile_device:
+
+###########################################################
+# CAPYBARA SETTINGS                                       #
+###########################################################
+ capybara_wait_time: 20
+
+###########################################################
+# LOGGER SETTINGS                                         #
+###########################################################
+ log_dir: "log"
+ debug_mode: false
+ html_log: log.html
+ selenium_server_log: selenium-server.log
+ required_clean_logs: true
+ hide_datetime_from_log: false
+
+###########################################################
+# MAIL SETTINGS                                           #
+###########################################################
+ mail_adapter: mailgun
+ mail_wait_time: 60
+
+# -Mailgun- (http://www.mailgun.com/)
+ mailgun_key: mailgun_account_private_key
+ mailgun_domain: mailgun_domain_with_stored_method
+ mailgun_sleep_time: 3
